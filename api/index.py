@@ -20,7 +20,7 @@ def get_base_url(url):
 def credit():
     return "(Daddy-API) Made With ❤️ — By CodeCrafters"
 
-@app.route("/api")
+@app.route("/api/<string:channel_id>.m3u8")
 def handle_api(channel_id):
     
     source_code = requests.get(f"https://daddylivehd.sx/embed/stream-{channel_id}.php").text 
